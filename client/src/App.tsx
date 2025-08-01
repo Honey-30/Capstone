@@ -6,6 +6,9 @@ import Layout from './components/layout/Layout'
 import Login from './pages/Login'
 import Register from './pages/Register'
 import Dashboard from './pages/Dashboard'
+import Projects from './pages/Projects'
+import NewProject from './pages/NewProject'
+import AIAssistant from './pages/AIAssistant'
 
 // Protected Route component
 const ProtectedRoute: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -71,12 +74,12 @@ function App() {
               }
             >
               <Route path="dashboard" element={<Dashboard />} />
-              {/* Temporary placeholder routes - will be implemented next */}
-              <Route path="projects" element={<div>Projects Page - Coming Soon</div>} />
-              <Route path="projects/new" element={<div>New Project Page - Coming Soon</div>} />
+              <Route path="projects" element={<Projects />} />
+              <Route path="projects/new" element={<NewProject />} />
               <Route path="projects/:id" element={<div>Project Detail Page - Coming Soon</div>} />
+              <Route path="projects/:id/edit" element={<div>Edit Project Page - Coming Soon</div>} />
               <Route path="tasks" element={<div>Tasks Page - Coming Soon</div>} />
-              <Route path="ai" element={<div>AI Assistant Page - Coming Soon</div>} />
+              <Route path="ai" element={<AIAssistant />} />
               <Route path="settings" element={<div>Settings Page - Coming Soon</div>} />
             </Route>
 

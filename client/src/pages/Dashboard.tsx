@@ -5,7 +5,6 @@ import {
   Plus, 
   FolderOpen, 
   CheckSquare, 
-  Clock, 
   TrendingUp,
   AlertCircle,
   Calendar
@@ -14,7 +13,7 @@ import { projectsAPI } from '../services/api'
 import { useAuth } from '../context/AuthContext'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card'
 import { Button } from '../components/ui/button'
-import { formatDate, formatRelativeTime } from '../utils/date'
+import { formatRelativeTime } from '../utils/date'
 import type { Project } from '../types'
 import toast from 'react-hot-toast'
 

@@ -14,7 +14,6 @@ import {
 import { useAuth } from '../../context/AuthContext'
 import { useTheme } from '../../context/ThemeContext'
 import { Button } from '../ui/button'
-import { cn } from '../../utils/cn'
 
 interface NavbarProps {
   onMenuToggle: () => void
