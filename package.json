@@ -1,1 +1,37 @@
-{ "name": "project-management-ai", "version": "1.0.0", "scripts": { "start": "node server/index.js", "client": "npm start --prefix client", "server": "nodemon server/index.js", "dev": "concurrently "npm run server" "npm run client"" }, "dependencies": { "express": "^4.17.1", "dotenv": "^10.0.0", "prisma": "^2.30.0", "@prisma/client": "^2.30.0", "cors": "^2.8.5" }, "devDependencies": { "nodemon": "^2.0.12", "concurrently": "^6.2.0" }}
+{
+  "name": "project-management-ai",
+  "version": "1.0.0",
+  "description": "Agentic AI Project Management Assistant Website",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:client": "cd client && npm run dev",
+    "dev:server": "cd server && npm run dev",
+    "build": "npm run build:client && npm run build:server",
+    "build:client": "cd client && npm run build",
+    "build:server": "cd server && npm run build",
+    "start": "cd server && npm start",
+    "server": "nodemon server/index.js",
+    "client": "npm start --prefix client",
+    "install:all": "npm install && cd client && npm install && cd ../server && npm install"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "dotenv": "^10.0.0",
+    "prisma": "^2.30.0",
+    "@prisma/client": "^2.30.0",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^2.0.12"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  }
+}
