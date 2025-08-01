@@ -8,6 +8,7 @@ import Register from './pages/Register'
 import Dashboard from './pages/Dashboard'
 import Projects from './pages/Projects'
 import NewProject from './pages/NewProject'
+import ProjectDetail from './pages/ProjectDetail'
 import AIAssistant from './pages/AIAssistant'
 
 // Protected Route component
@@ -76,7 +77,7 @@ function App() {
               <Route path="dashboard" element={<Dashboard />} />
               <Route path="projects" element={<Projects />} />
               <Route path="projects/new" element={<NewProject />} />
-              <Route path="projects/:id" element={<div>Project Detail Page - Coming Soon</div>} />
+              <Route path="projects/:id" element={<ProjectDetail />} />
               <Route path="projects/:id/edit" element={<div>Edit Project Page - Coming Soon</div>} />
               <Route path="tasks" element={<div>Tasks Page - Coming Soon</div>} />
               <Route path="ai" element={<AIAssistant />} />
